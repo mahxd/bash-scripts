@@ -1,0 +1,22 @@
+
+sudo apt install python3-pip
+sudo pip3 install pproxy
+
+#start local http Proxy 
+#/usr/local/bin/pproxy -l http://0.0.0.0:port/[#user:pass]
+
+/usr/local/bin/pproxy -l http://0.0.0.0:30118
+
+
+#start local http Proxy 
+#/usr/local/bin/pproxy -l socks5://0.0.0.0:port/[#user:pass]
+
+/usr/local/bin/pproxy -l http://0.0.0.0:30118
+
+
+# you can configure your phone or any device to use these http or socks proxy
+#On evry smartphone http proxy configuration is available
+#on local network you can find your wifi ip address using ip addr or ifconfig
+
+#For converting socks proxy to http proxy
+#pproxy -l http://0.0.0.0:8080 -ru socks5://socks5.proxy.ip.or.domain:port

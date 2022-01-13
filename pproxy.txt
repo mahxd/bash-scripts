@@ -7,16 +7,31 @@ sudo pip3 install pproxy
 
 /usr/local/bin/pproxy -l http://0.0.0.0:30118
 
-
-#start local http Proxy 
-#/usr/local/bin/pproxy -l socks5://0.0.0.0:port/[#user:pass]
-
-/usr/local/bin/pproxy -l http://0.0.0.0:30118
-
-
-# you can configure your phone or any device to use these http or socks proxy
+#you can configure your phone or any device to use these http or socks proxy
 #On evry smartphone http proxy configuration is available
-#on local network you can find your wifi ip address using ip addr or ifconfig
+#on local network you can find your wifi ip address using ip addr or ifconfig / ipconfig
+
+Android proxy settings:
+Open your Android's Settings.
+Tap Wi-Fi.
+Tap and hold the Wi-Fi Network Name.
+Select Modify Network.
+Click Advanced Options.
+Tap Manual.
+Change your proxy's settings.
+Enter the hostname and proxy port (e.g. YOUR-LAPTOP-IP:30118). You can find the full list in your dashboard.
+Tap Save.
+
+Iphone proxy settings:
+Settings > Wi-Fi to access proxy settings on an iPhone or iPad. 
+Tap the name of the Wi-Fi network you're connected to.
+Scroll down and you'll see the “HTTP Proxy” option at the bottom of the screen.
+By default, the HTTP Proxy option is set to “Off”
+
+
+
+#For local socks Proxy 
+#/usr/local/bin/pproxy -l socks5://0.0.0.0:port/[#user:pass]
 
 #For converting socks proxy to http proxy
 #pproxy -l http://0.0.0.0:8080 -ru socks5://socks5.proxy.ip.or.domain:port
